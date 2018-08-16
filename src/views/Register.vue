@@ -18,7 +18,7 @@
         required
       />
     </van-cell-group>
-    <van-button size="large" :disabled="disabled" @click="registerAndLogin">注册并登录</van-button>
+    <van-button class="btn-reg" size="large" :disabled="disabled" @click="registerAndLogin">注册并登录</van-button>
   </div>
 </template>
 <script>
@@ -70,10 +70,21 @@ export default {
       this.$store.dispatch('addUser', {
         account: this.username,
         password: this.password,
-        name: ''
+        name: '',
+        loginTime: new Date().getTime()
       })
     }
   }
 }
 </script>
-
+<style lang="scss" scoped>
+#register{
+  padding: 20px 13px;
+  box-sizing: border-box;
+  .btn-reg{
+    color: #fff;
+    background-color: #26b6be;
+    margin-top: 20px;
+  }
+}
+</style>

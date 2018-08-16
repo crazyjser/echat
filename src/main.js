@@ -5,6 +5,7 @@ import vant from 'vant'
 import store from './store/index'
 import 'vant/lib/vant-css/index.css'
 import '@/style/base.scss'
+import '@/style/theme.scss'
 Vue.use(vant)
 Vue.config.productionTip = false
 window.ECHAT = new Vue({
