@@ -37,6 +37,9 @@
 
 解决办法：通过sass的混合编写相关样式和vuex的状态管理实时切换主题，并将用户的主题信息储存在本地
 
+## 兼容版本
+IE10+支持，chrome/firefox/safari/opera支持，ios safari 8+支持，android browser4.4+支持
+
 ## 总结 ##
 
 麻雀虽小，五脏俱全。 希望您看完后批评指正。
