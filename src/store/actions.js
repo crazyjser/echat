@@ -33,7 +33,7 @@ export default {
   loginOut: ({state, commit}, obj) => {
     local.currentUser.set({})
     commit('SETCURRENTUSER', {})
-    window.ECHAT.$router.push({path: '/login'})
+    window.ECHAT.$router.replace({path: '/login'})
   },
   // 设置主题
   settingTheme: ({commit}, obj) => {

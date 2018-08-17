@@ -34,13 +34,13 @@ export default {
       local.echatEvent.set([])
       local.echatTheme.set([])
       local.currentUser.set({})
-      this.$router.push({path: '/login'})
+      this.$router.replace({path: '/login'})
     } else {
       this.initUser(local.echatUser.get())
       this.initEvent(local.echatEvent.get())
       this.initTheme(local.echatTheme.get())
       if (!Object.keys(local.currentUser.get()).length) {
-        this.$router.push({path: '/login'})
+        this.$router.replace({path: '/login'})
       }
     }
   },
