@@ -1,6 +1,6 @@
 # 基于vue2.0+vuex+localStorage开发的本地记事本
 
-> 本文采用vue2.0+vuex+localStorage+sass+vue-cli3.0，实现一个本地存储的移动端记事本。在线预览地址：[DEMO](http://echat.applinzi.com)
+> 采用vue2.0+vuex+localStorage+sass+vue-cli3.0，实现一个本地存储的移动端记事本。在线预览地址：[DEMO](http://echat.applinzi.com)
 
 ## 功能说明
 
