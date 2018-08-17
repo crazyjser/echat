@@ -23,10 +23,6 @@
 	
 	//安装成功后再看看是否可以正确运行了
 
-## demo二维码
-
-![image](https://raw.githubusercontent.com/lin-xin/notepad/master/screenshots/3.gif)
-
 ## 主要难点
 
 ### 1.账户注册和登录，并将事件和主题等和账户建立关联关系
