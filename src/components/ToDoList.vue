@@ -7,8 +7,8 @@
     <div class="content">
       <div class="sub-title">待办事件</div>
       <div v-if="todoEvent.length" class="event-list">
-        <div v-for="item in todoEvent" :key="item.id" class="event-item van-hairline--bottom">
-          <span>{{item.content}}</span>
+        <div v-for="(item, index) in todoEvent" :key="item.id" class="event-item van-hairline--bottom">
+          <span>{{index + 1}}、{{item.content}}</span>
           <div class="right-area">
             <van-button size="small" class="btn" @click="complete(item.id)">完成</van-button>
             <van-button size="small" class="btn" @click="cancel(item.id)">取消</van-button>
@@ -18,8 +18,8 @@
       <div v-else class="no-data">暂无待办的事件</div>
       <div class="sub-title">完成事件</div>
       <div v-if="completeEvent.length" class="event-list">
-        <div v-for="item in completeEvent" :key="item.id" class="event-item van-hairline--bottom">
-          <span>{{item.content}}</span>
+        <div v-for="(item, index) in completeEvent" :key="item.id" class="event-item van-hairline--bottom">
+          <span>{{index + 1}}、{{item.content}}</span>
           <div class="right-area">
             <van-button size="small" class="btn" @click="resetTodo(item.id)">未完成</van-button>
           </div>
@@ -28,8 +28,8 @@
       <div v-else class="no-data">暂无完成的事件</div>
       <div class="sub-title">取消事件</div>
       <div v-if="cancelEvent.length" class="event-list">
-        <div v-for="item in cancelEvent" :key="item.id" class="event-item van-hairline--bottom">
-          <span>{{item.content}}</span>
+        <div v-for="(item, index) in cancelEvent" :key="item.id" class="event-item van-hairline--bottom">
+          <span>{{index + 1}}、{{item.content}}</span>
           <div class="right-area">
             <van-button size="small" class="btn" @click="resetThing(item.id)">恢复</van-button>
           </div>

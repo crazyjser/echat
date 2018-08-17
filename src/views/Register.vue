@@ -1,24 +1,32 @@
 <template>
   <div id="register" class="page">
-    <van-cell-group>
-      <van-field
-        v-model.trim="username"
-        required
-        clearable
-        label="用户名"
-        placeholder="请输入用户名"
-        :error-message="nameErrorMessage"
-      />
-      <van-field
-        v-model.trim="password"
-        type="password"
-        label="密码"
-        placeholder="请输入密码"
-        :error-message="pwdErrorMessage"
-        required
-      />
-    </van-cell-group>
-    <van-button class="btn-reg" size="large" :disabled="disabled" @click="registerAndLogin">注册并登录</van-button>
+    <van-nav-bar
+      title="注册"
+      left-text="返回"
+      left-arrow
+      @click-left="$router.back(-1)"
+    />
+    <div class="content">
+      <van-cell-group>
+        <van-field
+          v-model.trim="username"
+          required
+          clearable
+          label="用户名"
+          placeholder="请输入用户名"
+          :error-message="nameErrorMessage"
+        />
+        <van-field
+          v-model.trim="password"
+          type="password"
+          label="密码"
+          placeholder="请输入密码"
+          :error-message="pwdErrorMessage"
+          required
+        />
+      </van-cell-group>
+      <van-button class="btn-reg" size="large" :disabled="disabled" @click="registerAndLogin">注册并登录</van-button>
+    </div>
   </div>
 </template>
 <script>
@@ -79,8 +87,11 @@ export default {
 </script>
 <style lang="scss" scoped>
 #register{
-  padding: 20px 13px;
-  box-sizing: border-box;
+  .content{
+    width: 100%;
+    padding: 0 13px;
+    box-sizing: border-box;
+  }
   .btn-reg{
     color: #fff;
     background-color: #26b6be;
