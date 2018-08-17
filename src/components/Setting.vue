@@ -3,7 +3,7 @@
     <van-cell-group>
       <van-cell title="主题" @click="popupShow = !popupShow"/>
       <van-cell title="修改姓名" @click="modifyName" :label="$store.state.currentUser.name"/>
-      <van-cell title="下载" @click="down"/>
+      <van-cell title="github地址" @click="linkTo"/>
     </van-cell-group>
     <van-button size="large" type="danger" @click="loginOut">退出登录</van-button>
     <van-popup v-model="popupShow" position="right" :overlay="true" class="popup-wrapper">
@@ -34,15 +34,8 @@ export default {
     loginOut() {
       this.$store.dispatch('loginOut')
     },
-    down() {
-      let fileName = 'echat记事本'
-      let content = JSON.stringify(this.$store.state.echatEvent)
-      let aTag = document.createElement('a');
-      let blob = new Blob([content]);
-      aTag.download = fileName;
-      aTag.href = URL.createObjectURL(blob);
-      aTag.click();
-      URL.revokeObjectURL(blob);
+    linkTo() {
+      window.open('https://github.com/crazyjser/echat')
     }
   },
   components: {

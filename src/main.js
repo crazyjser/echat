@@ -9,7 +9,7 @@ import '@/style/base.scss'
 import '@/style/theme.scss'
 Vue.use(vant)
 Vue.config.productionTip = false
-FastClick.attach(document.body);
+FastClick.attach(document.body)
 window.ECHAT = new Vue({
   router,
   store,

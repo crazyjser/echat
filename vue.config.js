@@ -1,6 +1,6 @@
 const path = require('path')
 module.exports = {
-  baseUrl: '/echat/',
+  baseUrl: './',
   outputDir: 'echat',
   // eslint-loader 是否在保存的时候检查
   lintOnSave: true,
